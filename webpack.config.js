@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry : './src/wrap.js',
@@ -26,5 +27,13 @@ module.exports = {
                 use : ['babel-loader']
             }
         ]
-    }
+    },
+    plugins : [
+        new webpack.ProvidePlugin({ // inject ES5 modules as global vars
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Tether: 'tether'
+        })
+    ]
 }
