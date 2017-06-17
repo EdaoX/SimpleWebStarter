@@ -2,8 +2,8 @@
 require('../index.html');
 
 // Import Style
-require('./style/main.sass');
 require('bootstrap/dist/css/bootstrap.css');
+require('./style/main.sass');
 
 // Import JavaScript
 require('bootstrap');
